@@ -10,7 +10,7 @@
 @import "search/typeahead";
 
 body {
-	background: white;
+	background-color: #fafafa;
 }
 
 .app {
@@ -18,11 +18,11 @@ body {
 }
 
 .instagram-photos {
-	max-width: 320px;
+	max-width: 640px;
 	margin: 6% auto;
 
 	.btn-group {
-		margin: 6% 0;
+		margin: 3% 0;
 	}
 }
 
