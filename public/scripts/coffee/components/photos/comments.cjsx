@@ -8,7 +8,7 @@ Comments = React.createClass
 				<img className="media-object" src={ comment.from.profile_picture } width="30" height="30" />
 			</div>
 			<div className="media-body">
-				<h6 className="media-heading">{ comment.from.full_name }</h6>
+				<h6 className="media-heading">{ comment.from.full_name } (@{ comment.from.username })</h6>
 				<p>{ comment.text }</p>
 			</div>
 		</div>
