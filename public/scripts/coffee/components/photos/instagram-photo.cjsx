@@ -34,17 +34,13 @@ InstagramPhoto = React.createClass
 		<Comments comments={ @props.data.comments.data } />
 	render: ->
 		<div className="instagram-photo">
-			<a href={ @props.data.link } target="_blank">
-				<img className="image" src={ @props.images.standard_resolution.url } alt={ @props.data.caption?.text } />
-			</a>
 
 			<div className="media user-profile">
 				<div className="media-left">
 					<img className="media-object" src={ @props.user.profile_picture } width="30" height="30" />
 				</div>
 				<div className="media-body">
-					<h6 className="media-heading">{ @props.user.full_name }</h6>
-					<p>{ @props.data.caption?.text }</p>
+					<h4 className="media-heading">{ @props.user.full_name } <small>@{ @props.user.username }</small></h4>
 					<ul className="photo-meta list-inline">
 						<li><span className="glyphicon glyphicon-time"></span> { @getRelativeTime @props.data.created_time }</li>
 						<li title={ _.pluck( @props.data.likes.data, 'full_name').join(', ') }><span className="glyphicon glyphicon-heart"></span> { @props.data.likes.count } likes</li>
@@ -53,8 +49,14 @@ InstagramPhoto = React.createClass
 				</div>
 			</div>
 
+			<a href={ @props.data.link } target="_blank">
+				<img className="image" src={ @props.images.standard_resolution.url } alt={ @props.data.caption?.text } />
+			</a>
 
-			{ if @props.data.comments.count then @renderComments() }
+			<div className="comments">
+				<p>{ @props.data.caption?.text }</p>
+				{ if @props.data.comments.count then @renderComments() }
+			</div>
 		</div>
 
 module.exports = InstagramPhoto
