@@ -15,7 +15,7 @@ PhotoActions.getPhotosByCoords.listen (coords, before) ->
 	params =
 		lat: coords.latitude
 		lng: coords.longitude
-		distance: 5000
+		distance: 10000
 		client_id: igClientId
 
 	if before
