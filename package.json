@@ -1,6 +1,6 @@
 {
-  "name": "project-starter",
-  "description": "Bare-bones project starter using Gulp, Bootstrap, Sass and Underscore.js",
+  "name": "project-locallife",
+  "description": "Fang Yuan - Video, photos by geolocation.",
   "version": "0.0.1",
   "dependencies": {
     "coffee-reactify": "^3.0.0",
