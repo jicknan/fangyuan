@@ -3,8 +3,8 @@ _ = require 'underscore'
 
 Footer = React.createClass
 	render: ->
-		<footer className="container-fluid text-center">
-			<small>By Jick Nan</small>
+		<footer className="text-center">
+			(copyright) 2015 by Jick Nan
 		</footer>
 
 module.exports = Footer

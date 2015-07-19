@@ -28,10 +28,12 @@ GeoPhotoList = React.createClass
 		<InstagramPhoto key={ photo.id } images={ photo.images } user={ photo.user } userCoords={ @props.coords } location={ photo.location } data={ _.pick(photo, 'caption', 'likes', 'link', 'tags', 'created_time', 'comments') } />
 	renderLoadMoreBtn: ->
 		return if @state.results.length is 0
-		<button className="btn btn-primary center-block" style={{marginTop: 18}} onClick={ @loadNextSet }>{ if @state.loading then "Loading ..." else "Load more" }</button>
+		<div className="text-center">
+			<button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style={{marginTop: 18}} onClick={ @loadNextSet }>{ if @state.loading then "Loading ..." else "Load more" }</button>
+		</div>
 	render: ->
 		if @state.loading and @state.results.length is 0
-			<p className="text-center">Getting photos...</p>
+			<div className="mdl-spinner mdl-js-spinner is-active"></div>
 		else
 			<div className="photo-list">
 				{ _.map( @state.results, @renderPhoto ) }

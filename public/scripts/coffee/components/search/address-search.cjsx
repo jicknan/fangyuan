@@ -10,7 +10,7 @@ AddressSearch = React.createClass
 	mixins: [Router.Navigation, Router.State]
 	getDefaultProps: ->
 		query: ''
-		placeholder: 'ie. Manhattan, USA'
+		placeholder: 'Place to Explorer, ie. Manhattan, USA'
 		addOnText: 'Search'
 	getInitialState: ->
 		query: @props.query or ""
@@ -52,7 +52,7 @@ AddressSearch = React.createClass
 			@transitionTo 'app'
 	render: ->
 		<div className="typeahead">
-			<input type="search" ref="searchInput" className="form-control" placeholder={ @props.placeholder } value={ @state.query } onChange={ @onChangeQuery } />
+			<input type="search" id="address_search" ref="searchInput" className="mdl-textfield__input" placeholder={ @props.placeholder } value={ @state.query } onChange={ @onChangeQuery } />
 		</div>
 
 module.exports = AddressSearch

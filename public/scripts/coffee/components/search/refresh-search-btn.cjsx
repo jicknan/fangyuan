@@ -23,6 +23,6 @@ RefreshSearchBtn = React.createClass
 		else
 			"Refresh"
 	render: ->
-		<button className="btn btn-default" onClick={ @refresh }><span className="glyphicon glyphicon-repeat"></span> { @getBtnText() }</button>
+		<button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onClick={ @refresh }>{ @getBtnText() }</button>
 
 module.exports = RefreshSearchBtn

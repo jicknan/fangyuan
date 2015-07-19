@@ -25,16 +25,12 @@ IndexPage = React.createClass
 		else
 			null
 	renderRefreshBtn: ->
-		<div className="btn-group">
-			<RefreshResultsBtn coords={ @state.location } />
-		</div>
+		<RefreshResultsBtn coords={ @state.location } />
 	render: ->
 		<div className="instagram-photos">
 			<AddressSearch query={ @getAddressFromUrl() } addOnText="Location" />
-			<div className="btn-group btn-group-justified">
-				<div className="btn-group">
-					<LocationSearchBtn />
-				</div>
+			<div className="btn-group">
+				<LocationSearchBtn />
 				{ if @state.location.latitude then @renderRefreshBtn() }
 			</div>
 			<GeoPhotos coords={ @state.location } />

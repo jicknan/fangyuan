@@ -18,12 +18,20 @@ body {
 }
 
 .instagram-photos {
-	max-width: 640px;
-	margin: 6% auto;
+	max-width: 642px;
+	margin: 0 auto;
 
 	.btn-group {
 		margin: 3% 0;
+
+		.mdl-button {
+			margin-right: 20px;
+		}
 	}
+}
+
+.text-center {
+	text-align: center;
 }
 
 .get-location-btn {

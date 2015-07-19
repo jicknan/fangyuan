@@ -31,6 +31,6 @@ LocationSearch = React.createClass
 		else
 			"Get location"
 	render: ->
-		<button className="btn btn-default" onClick={ @onClick }><span className="glyphicon glyphicon-map-marker"></span> { @getBtnText() }</button>
+		<button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onClick={ @onClick }>{ @getBtnText() }</button>
 
 module.exports = LocationSearch

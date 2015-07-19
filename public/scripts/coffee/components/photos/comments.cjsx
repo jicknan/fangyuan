@@ -3,17 +3,11 @@ _ = require 'underscore'
 
 Comments = React.createClass
 	renderComment: (comment) ->
-		<div key={ comment.id } className="media comment">
-			<div className="media-left">
-				<img className="media-object" src={ comment.from.profile_picture } width="30" height="30" />
-			</div>
-			<div className="media-body">
-				<h6 className="media-heading">{ comment.from.full_name } (@{ comment.from.username })</h6>
-				<p>{ comment.text }</p>
-			</div>
+		<div key={ comment.id } className="mdl-card__supporting-text comment">
+			<strong>@{ comment.from.username }</strong> { comment.text }
 		</div>
 	render: ->
-		<div className="comments media-list">
+		<div>
 			{ _.map( @props.comments, @renderComment ) }
 		</div>
 
