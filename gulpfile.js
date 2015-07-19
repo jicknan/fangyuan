@@ -7,10 +7,11 @@ var $ = require( 'gulp-load-plugins' )();
 // Helpers
 var paths = {
 	sass: './public/styles/sass',
-	css: './public/styles/css',
+	css: './dist/styles/css',
 	coffee: './public/scripts/coffee',
-	js: './public/scripts/js',
-	app: './public'
+	js: './dist/scripts/js',
+	dev: './public',
+	app: './dist'
 }
 
 /**
@@ -36,16 +37,16 @@ gulp.task('browserify', function(){
 			$.util.log($.util.colors.red('Error'), err.message + "\nStack:\n\n", err.stack);
 			this.emit('end');
 		})
-		.pipe($.rename('combined.js'))
+		.pipe( $.uglify() )
+		.pipe( $.rename( 'combined.min.js' ) )
 		.pipe(gulp.dest( paths.js ))
 	    .pipe( $.size({ title: "Compiled JavaScript", gzip: true }) );
 });
 
-gulp.task('uglify', ['browserify'], function() {
-	return gulp.src( paths.js + "/combined.js" )
-		.pipe( $.uglify() )
-		.pipe( $.rename( 'combined.min.js' ) )
-		.pipe( gulp.dest( paths.js ) );
+gulp.task('html', function () {
+	return gulp.src( paths.dev + '/*.html' )
+		.pipe( gulp.dest( paths.app ) )
+		.pipe( $.size({ title: "Copied HTML", gzip: true }) );
 });
 
 /**
@@ -64,7 +65,7 @@ gulp.task('connect', function () {
 });
 
 
-gulp.task('host', ['sass', 'browserify', 'connect'], function() {
+gulp.task('host', ['sass', 'browserify', 'html', 'connect'], function() {
 
 });
 
