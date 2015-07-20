@@ -1,10 +1,10 @@
 {
-  "name": "Project LocalLife",
-  "version": "0.0.1",
+  "name": "FangYuan",
+  "version": "0.0.2",
   "authors": [
     "Jick Nan <jick.nan@gmail.com>"
   ],
-  "description": "Fang Yuan - Video, photos by geolocation.",
+  "description": "FangYuan - the local life around me.",
   "private": true,
   "ignore": [
     "**/.*",
@@ -12,7 +12,5 @@
     "bower_components"
   ],
   "dependencies": {
-    "underscore": "~1.6.0",
-    "bootstrap": "~3.3.0"
   }
 }

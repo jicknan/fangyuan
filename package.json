@@ -1,7 +1,7 @@
 {
-  "name": "project-locallife",
-  "description": "Fang Yuan - Video, photos by geolocation.",
-  "version": "0.0.1",
+  "name": "fangyuan",
+  "description": "FangYuan - the local life around me.",
+  "version": "0.0.2",
   "dependencies": {
     "coffee-reactify": "^3.0.0",
     "connect": "^2.14.4",

@@ -12,10 +12,12 @@ FangYuan - the local life around me.
 - Bootstrap
 - Gulp
 - Browserify
+- material-design-lite
 
 ### To get started
-Add your Instagram and Google Maps client.id to index.html. Then run the following commands
+Add your Instagram and Google Maps client.id to src/index.html. Then run the following commands
 
-1. `$ npm install && bower install`
+1. `$ npm install`
 2. `$ gulp`
 
+Dist-files generate to ./dist by gulp, and release to 'gh-pages' branch.
