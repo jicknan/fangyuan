@@ -1,5 +1,5 @@
 ## FangYuan 
-FangYuan - the local life around you.
+FangYuan - the local life around me.
 
 [View demo](http://jicknan.github.io/fangyuan/)
 
