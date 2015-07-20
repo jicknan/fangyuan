@@ -6,11 +6,11 @@ var $ = require( 'gulp-load-plugins' )();
 
 // Helpers
 var paths = {
-	sass: './public/styles/sass',
+	sass: './src/styles/sass',
 	css: './dist/styles/css',
-	coffee: './public/scripts/coffee',
+	coffee: './src/scripts/coffee',
 	js: './dist/scripts/js',
-	dev: './public',
+	dev: './src',
 	app: './dist'
 }
 
